@@ -1,0 +1,11 @@
+{
+  "name": "f4ah6o/mhx-tmpx-sample",
+  "version": "0.1.0",
+  "deps": {
+    "f4ah6o/tmpx": { "path": "../tmpx.mbt" }
+  },
+  "source": "src",
+  "readme": "README.mbt.md",
+  "license": "Apache-2.0",
+  "description": "tmpx sample app emitting mhx-compatible HTML"
+}

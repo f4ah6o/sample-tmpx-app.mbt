@@ -1,0 +1,8 @@
+import {
+  "f4ah6o/tmpx/tmpx" as @tmpx,
+  "f4ah6o/mhx-tmpx-sample" as @sample,
+}
+
+options(
+  "is-main": true,
+)
