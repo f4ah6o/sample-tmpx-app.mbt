@@ -2,7 +2,7 @@
   "name": "f4ah6o/mhx-tmpx-sample",
   "version": "0.1.0",
   "deps": {
-    "f4ah6o/tmpx": { "path": "../tmpx.mbt" }
+    "f4ah6o/tmpx": "0.3.0"
   },
   "source": "src",
   "readme": "README.mbt.md",
