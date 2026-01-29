@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      mhx:
+        specifier: 2026.1.18
+        version: 2026.1.18
     devDependencies:
       vite:
         specifier: ^5.4.0
@@ -306,6 +310,9 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
+  mhx@2026.1.18:
+    resolution: {integrity: sha512-SZ32MKygnVZkeMRqDcUZ8tDOL+TA8PDth/RlBX5g5mP8rLz0CPMH58vNQLT8/wYEjU+sU6ngnrKvDpYpOFUsmg==}
+
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -539,6 +546,8 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  mhx@2026.1.18: {}
 
   nanoid@3.3.11: {}
 

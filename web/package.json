@@ -7,6 +7,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "mhx": "2026.1.18"
+  },
   "devDependencies": {
     "vite": "^5.4.0",
     "vite-plugin-moonbit": "^0.1.3"
