@@ -67,3 +67,26 @@ npm run dev
 - Button click action
 
 The Vite demo imports MoonBit code via `vite-plugin-moonbit` and injects the rendered body HTML at runtime.
+
+## Cloudflare Workers demo
+
+1) Generate HTML + mhx runtime assets:
+
+```bash
+just worker-assets
+```
+
+2) Start local dev server:
+
+```bash
+npx wrangler dev
+```
+
+3) Deploy:
+
+```bash
+npx wrangler deploy
+```
+
+The Worker serves `worker/public/index.html` and the mhx runtime under `/mhx/`.
+Dynamic endpoints `/hello` and `/search` are handled by `worker/src/index.ts`.

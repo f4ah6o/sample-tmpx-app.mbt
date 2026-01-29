@@ -59,14 +59,33 @@ fn body_children(include_runtime~ : Bool) -> Array[@tmpx.Node] {
   ]
   if include_runtime {
     nodes
-    ..push(@tmpx.script([@tmpx.src("/mhx/mhx_ffi.js")], []))
-    ..push(@tmpx.script([@tmpx.src("/mhx/index.js")], []))
     ..push(
-      @tmpx.script([], [
+      @tmpx.script([@tmpx.attr("type", "module")], [
         @tmpx.raw_html(
-          "if (globalThis.mhx && globalThis.mhx.init_mhx) {" +
-          "  globalThis.mhx.init_mhx();" +
-          "}",
+          "import * as mhx_ffi from \"/mhx/mhx_ffi.js\";" +
+          "globalThis.mhx_ffi = mhx_ffi;" +
+          "const bindExports = () => {" +
+          "  const g = globalThis;" +
+          "  const init = g.f4ah6o$mhx$core$$init_mhx;" +
+          "  const handle = g.f4ah6o$mhx$core$$handle_event;" +
+          "  const onFetchOk = g.f4ah6o$mhx$network$$on_fetch_success;" +
+          "  const onFetchErr = g.f4ah6o$mhx$network$$on_fetch_error;" +
+          "  const onMutation = g.f4ah6o$mhx$core$$on_mutation_observed;" +
+          "  const process = () => {};" +
+          "  if (g.mhx_ffi && g.mhx_ffi.register_exports && init && handle && onFetchOk && onFetchErr && onMutation) {" +
+          "    g.mhx_ffi.register_exports(init, process, handle, \"unknown\", onFetchOk, onFetchErr, onMutation);" +
+          "  }" +
+          "  if (g.mhx && g.mhx.init_mhx) {" +
+          "    g.mhx.init_mhx();" +
+          "    if (g.mhx.process) {" +
+          "      g.mhx.process(document.body);" +
+          "    }" +
+          "  }" +
+          "};" +
+          "const script = document.createElement(\"script\");" +
+          "script.src = \"/mhx/index.js\";" +
+          "script.onload = bindExports;" +
+          "document.head.appendChild(script);",
         ),
       ]),
     )

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developers.cloudflare.com/wrangler/config-schema.json",
+  "name": "mhx-tmpx-sample",
+  "main": "worker/src/index.ts",
+  "compatibility_date": "2026-01-29",
+  "assets": {
+    "directory": "./worker/public",
+    "binding": "ASSETS"
+  }
+}
