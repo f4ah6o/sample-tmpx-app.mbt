@@ -3,7 +3,7 @@ import moonbit from "vite-plugin-moonbit";
 import { resolve } from "node:path";
 import type { IncomingMessage } from "node:http";
 
-const MBT_ID = "mbt:f4ah6o/mhx-tmpx-sample/main";
+const MBT_ID = "mbt:f4ah6o/mhx-tmpx-sample/web";
 
 function exportRenderBody(): Plugin {
   return {
@@ -11,7 +11,7 @@ function exportRenderBody(): Plugin {
     enforce: "post",
     transform(code, id) {
       if (!id.includes(MBT_ID)) return null;
-      const renderBody = code.match(/function\s+(f4ah6o\$mhx\$45\$tmpx\$45\$sample\$main\$\$render_body)\s*\(/);
+      const renderBody = code.match(/function\s+(f4ah6o\$mhx\$45\$tmpx\$45\$sample\$web\$\$render_body)\s*\(/);
       if (!renderBody) {
         this.warn(`export-render-body: render_body not found for ${id}`);
         return null;

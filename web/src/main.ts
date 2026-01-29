@@ -1,4 +1,4 @@
-import { render_body } from "mbt:f4ah6o/mhx-tmpx-sample/main";
+import { render_body } from "mbt:f4ah6o/mhx-tmpx-sample/web";
 
 document.body.outerHTML = render_body();
 
