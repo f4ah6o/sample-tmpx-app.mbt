@@ -6,5 +6,4 @@ pub fn render_body() -> String {
 ///|
 fn main {
   let _ = render_body()
-
 }

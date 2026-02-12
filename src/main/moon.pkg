@@ -1,5 +1,5 @@
 import {
-  "f4ah6o/mhx-tmpx-sample" as @sample,
+  "f4ah6o/mhx-tmpx-sample" @sample,
 }
 
 options(

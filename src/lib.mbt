@@ -58,7 +58,7 @@ fn body_children(include_runtime~ : Bool) -> Array[@tmpx.Node] {
     query_table_section(),
   ]
   if include_runtime {
-    nodes..push(
+    nodes.push(
       script_([@tmpx.attr("type", "module")], [
         @tmpx.raw(
           "import * as mhx_ffi from \"/mhx/mhx_ffi.js\";" +
