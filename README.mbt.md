@@ -76,16 +76,17 @@ The Vite demo imports MoonBit code via `vite-plugin-moonbit` and injects the ren
 just worker-assets
 ```
 
-2) Start local dev server:
+2) Install dependencies and start local dev server:
 
 ```bash
-npx wrangler dev
+pnpm install
+pnpm exec cf dev
 ```
 
 3) Deploy:
 
 ```bash
-npx wrangler deploy
+pnpm exec cf deploy
 ```
 
 The Worker serves `worker/public/index.html` and the mhx runtime under `/mhx/`.

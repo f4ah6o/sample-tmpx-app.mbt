@@ -1,0 +1,15 @@
+{
+  "name": "mhx-tmpx-sample",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "cf": "1.0.0-beta.14",
+    "wrangler": "^4.149.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
+  }
+}

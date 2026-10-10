@@ -32,13 +32,13 @@ worker-assets:
     cp {{mhx_dir}}/_build/js/release/build/main/main.js {{worker_public}}/mhx/index.js
     cp {{mhx_dir}}/src/ffi/mhx_ffi.js {{worker_public}}/mhx/mhx_ffi.js
 
-# Start Cloudflare Worker dev server (requires Wrangler)
+# Start Cloudflare Worker dev server (requires cf)
 worker-dev: worker-assets
-    pnpx wrangler dev
+    pnpm exec cf dev
 
-# Deploy Cloudflare Worker (requires Wrangler + login)
+# Deploy Cloudflare Worker (requires cf + login)
 worker-deploy: worker-assets
-    pnpx wrangler deploy
+    pnpm exec cf deploy
 
 # Clean build artifacts
 clean:
