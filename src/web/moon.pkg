@@ -2,6 +2,4 @@ import {
   "f4ah6o/mhx-tmpx-sample" @sample,
 }
 
-options(
-  "is-main": true,
-)
+pkgtype(kind: "executable")
